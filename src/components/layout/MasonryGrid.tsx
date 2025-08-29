@@ -13,8 +13,8 @@ export default function MasonryGrid({ children, className = '' }: MasonryGridPro
   // Distribute cards into two columns with stable gaps
   childrenArray.forEach((child, index) => {
     // Use index-based seed for consistent random gaps
-    const seed = index * 9973 % 100 // Pseudo-random but deterministic
-    const randomGap = (seed * 50 / 100) + 20 // 20-70px stable gap
+    const seed = index * 9973 % 500 // Pseudo-random but deterministic
+    const randomGap = (seed * 50 / 100) // 20-70px stable gap
     
     const wrappedChild = (
       <div 

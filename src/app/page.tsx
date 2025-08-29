@@ -214,36 +214,38 @@ export default function Home() {
         <div className="min-h-screen bg-[#14151C] text-[#A4AFC5]">
           <div className="px-4 pt-6 pb-20">
             <div className="flex flex-col justify-center items-center p-8">
-              <h1 className="text-3xl font-medium text-[#A4AFC5] leading-tight font-inter">My Strategies</h1>
-              <p className="text-sm text-[#A4AFC580] font-inter text-center py-4">Practice these strategies today, and mark them completed once you're done.</p>
+              <h1 className="text-3xl font-medium text-[#A4AFC5] leading-tight font-inter text-center">strategies i want to do today</h1>
+              <p className="text-sm text-[#A4AFC580] font-inter text-center py-4">practice these strategies today, and mark them as completed once you're done!</p>
             </div>
             {savedPins.length > 0 ? (
-              <MasonryGrid>
-                {savedPins.map((pin) => (
-                  <div key={pin.id} data-pin-id={pin.id}>
-                    <AdviceCard 
-                      pin={pin} 
-                      isGridView={true}
-                      onRemove={() => handleRemovePin(pin)}
-                      onDone={() => handleDonePin(pin)}
-                    />
-                  </div>
-                ))}
-              </MasonryGrid>
+              <div className="flex flex-col justify-center items-center">
+                <MasonryGrid>
+                  {savedPins.map((pin) => (
+                    <div key={pin.id} data-pin-id={pin.id}>
+                      <AdviceCard 
+                        pin={pin} 
+                        isGridView={true}
+                        onRemove={() => handleRemovePin(pin)}
+                        onDone={() => handleDonePin(pin)}
+                      />
+                    </div>
+                  ))}
+                </MasonryGrid>
+              </div>
             ) : (
               <div className="flex items-center mt-4">
-              <img 
-                src="/monkey.jpeg" 
-                alt="Monkey" 
-                className="w-10 h-10 rounded-full mr-4"
-              />
-              <p className="text-[#A4AFC580] font-inter">no saved cards! head to the search tab to find some :)</p>
-            </div>
+                <img 
+                  src="/monkey.jpeg" 
+                  alt="Monkey" 
+                  className="w-10 h-10 rounded-full mr-4"
+                />
+                <p className="text-[#A4AFC580] font-inter">no saved cards! head to the search tab to find some :)</p>
+              </div>
             )}
             
             {completedPins.length > 0 && (
               <div className="flex flex-col justify-center items-center p-8">
-                <h2 className="text-lg font-medium text-[#A4AFC5] mb-4 font-inter">Strategies I Completed</h2>
+                <h2 className="text-lg font-medium text-[#A4AFC5] mb-4 font-inter">strategies i completed</h2>
                 <MasonryGrid>
                   {completedPins.map((pin) => (
                     <div key={pin.id} className="opacity-60">
