@@ -4,7 +4,7 @@ import { generateAdvicePins } from '@/lib/gemini'
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    const { query } = body
+    const { query, previousAdvice = [], round = 1 } = body
 
     if (!query || typeof query !== 'string') {
       return NextResponse.json(
@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const pins = await generateAdvicePins(query)
+    const pins = await generateAdvicePins(query, previousAdvice, round)
     
     return NextResponse.json({ pins })
   } catch (error) {

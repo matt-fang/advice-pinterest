@@ -1,21 +1,37 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Inter';
+  src: url('/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Serif JP';
+  src: url('/NotoSerifJP-VariableFont_wght.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #0f172a;
-  --foreground: #f1f5f9;
+  --background: #14151C;
+  --foreground: #A4AFC5;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'Inter', system-ui, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
 }
 
 html, body {
@@ -27,4 +43,9 @@ html, body {
 .columns-2 > * {
   display: inline-block;
   width: 100%;
+}
+
+/* Add Inter font utility class */
+.font-inter {
+  font-family: 'Inter', system-ui, sans-serif;
 }

@@ -5,9 +5,10 @@ interface QuoteCardProps {
   content: string
   colorScheme: string
   author?: string
+  onSave?: () => void
 }
 
-export default function QuoteCard({ content, colorScheme, author }: QuoteCardProps) {
+export default function QuoteCard({ content, colorScheme, author, onSave }: QuoteCardProps) {
   const isNatureQuote = colorScheme === 'nature-quote'
   
   return (
@@ -18,6 +19,7 @@ export default function QuoteCard({ content, colorScheme, author }: QuoteCardPro
           : 'bg-slate-700'
       }`}
       style={{ minHeight: '320px' }}
+      onSave={onSave}
     >
       {isNatureQuote && (
         <div 
@@ -34,14 +36,14 @@ export default function QuoteCard({ content, colorScheme, author }: QuoteCardPro
         <div className="mb-4">
           <span className="text-4xl text-amber-200">&ldquo;</span>
         </div>
-        <p className={`text-lg font-medium leading-tight italic mb-4 ${
-          isNatureQuote ? 'text-amber-100' : 'text-white'
+        <p className={`text-lg font-medium leading-tight italic mb-4 font-inter ${
+          isNatureQuote ? 'text-amber-100' : 'text-[#A4AFC5]'
         }`}>
           {content}
         </p>
         {author && (
-          <p className={`text-sm font-semibold ${
-            isNatureQuote ? 'text-amber-200' : 'text-gray-300'
+          <p className={`text-sm font-semibold font-inter ${
+            isNatureQuote ? 'text-amber-200' : 'text-[#A4AFC5]'
           }`}>
             - {author.toUpperCase()}
           </p>
