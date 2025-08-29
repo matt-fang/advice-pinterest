@@ -52,7 +52,7 @@ export default function SearchResults({
               alt="Monkey" 
               className="w-10 h-10 rounded-full mr-4"
             />
-            <p className="text-[#A4AFC580] font-inter">here's what you could try:</p>
+            <p className="text-[#A4AFC580] font-inter">here are some strategies monkey came up with just for you:</p>
           </div>
         </div>
 

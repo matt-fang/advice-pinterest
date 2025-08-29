@@ -32,7 +32,7 @@ export default function SearchScreen({ onSearch, onSelectPreviousChat, activeTab
           <h1 className="text-3xl font-medium text-[#A4AFC5] leading-tight font-inter">
             what's bothering you today?
           </h1>
-          <p className="text-[#A4AFC580] font-inter py-4">share what’s on your mind, and i’ll offer gentle, real advice to help you navigate your situation.</p>
+          <p className="text-[#A4AFC580] font-inter py-4">share what’s on your mind, and monkey will offer gentle, real advice to help you navigate your situation.</p>
         </div>
         
         <SearchInput
