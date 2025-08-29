@@ -13,7 +13,7 @@ const COLOR_SCHEMES = {
   'purple-gradient': 'bg-gradient-to-br from-purple-500 to-purple-600 text-white'
 }
 
-export default function SquareCard({ title, content, colorScheme }: SquareCardProps) {
+export default function SquareCard({ content, colorScheme }: SquareCardProps) {
   const colorClass = COLOR_SCHEMES[colorScheme as keyof typeof COLOR_SCHEMES] || COLOR_SCHEMES['orange-gradient']
   
   return (

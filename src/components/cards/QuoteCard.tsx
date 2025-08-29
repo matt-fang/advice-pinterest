@@ -7,7 +7,7 @@ interface QuoteCardProps {
   author?: string
 }
 
-export default function QuoteCard({ title, content, colorScheme, author }: QuoteCardProps) {
+export default function QuoteCard({ content, colorScheme, author }: QuoteCardProps) {
   const isNatureQuote = colorScheme === 'nature-quote'
   
   return (
@@ -32,7 +32,7 @@ export default function QuoteCard({ title, content, colorScheme, author }: Quote
       
       <div className="relative z-10 flex flex-col justify-center h-full text-center">
         <div className="mb-4">
-          <span className="text-4xl text-amber-200">"</span>
+          <span className="text-4xl text-amber-200">&ldquo;</span>
         </div>
         <p className={`text-lg font-medium leading-tight italic mb-4 ${
           isNatureQuote ? 'text-amber-100' : 'text-white'

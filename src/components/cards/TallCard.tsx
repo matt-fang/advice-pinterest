@@ -13,7 +13,7 @@ const COLOR_SCHEMES = {
   'dark-green': 'bg-green-900 text-green-300'
 }
 
-export default function TallCard({ title, content, colorScheme }: TallCardProps) {
+export default function TallCard({ content, colorScheme }: TallCardProps) {
   const colorClass = COLOR_SCHEMES[colorScheme as keyof typeof COLOR_SCHEMES] || COLOR_SCHEMES['dark-yellow']
   
   return (

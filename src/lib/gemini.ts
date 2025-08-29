@@ -59,7 +59,7 @@ Return as valid JSON array with 5 objects.
       adviceData = JSON.parse(text)
     }
 
-    return adviceData.map((advice: any, index: number) => ({
+    return adviceData.map((advice: { title: string; content: string; tone: string }, index: number) => ({
       id: `pin-${Date.now()}-${index}`,
       title: advice.title,
       content: advice.content,

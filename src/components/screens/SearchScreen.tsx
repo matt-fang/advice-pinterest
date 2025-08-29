@@ -22,7 +22,7 @@ export default function SearchScreen({ onSearch, activeTab, onTabChange }: Searc
       <div className="flex flex-col justify-center items-center min-h-screen px-6 pb-20">
         <div className="text-center mb-12">
           <h1 className="text-3xl font-light text-gray-300 leading-tight">
-            What's been on<br />your mind?
+            What&apos;s been on<br />your mind?
           </h1>
         </div>
         
